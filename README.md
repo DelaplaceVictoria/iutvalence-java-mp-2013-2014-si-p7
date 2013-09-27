@@ -17,5 +17,15 @@ Tous les pions peuvent être pris. Pour cela, il suffit d’encadrer un pion enn
 (Mais si un pion se met délibérément entre deux pions ennemis, il est imprenable tant qu’il reste dans cette position).
 Pour le roi, il doit être entouré de tous les côtés (4 s'il est au centre, 3 s'il est au bord) pour être capturé.
 
-A débattre : Le roi et les pions se déplacent selon les rangées et les colonnes, d’autant de cases libres qu’ils veulent. 
+Le roi et les pions se déplacent selon les rangées et les colonnes, d’autant de cases libres qu’ils veulent. 
 
+First of all, we ask for the player to lunch a game, the chessboard appear with all of the 
+pawns, (the king include), one player lead the blacks pawns at the middle of the chessboard
+and the other is playing the white from all over the tray.
+The white pawns begin to play, they can only move 1 pawns per round, (this game is obviously
+a in turn game), they can move horizontally,vertically and in diagonal until there where blocked by 
+something.
+To erase a pawn, you need to surround him with 2 paws from both side (Only horizontally, or vertically)
+But if a pawn come between two opponent's pawns, it is not loose.
+The game ends when the king was surround or if he succed reaching one of the corn of the 
+chessboard. 

@@ -1,29 +1,55 @@
 package fr.iutvalence.java.mp.CelticChess;
 /**
  * This class represents a CelticChess's game
- * @author delaplvi
+ * @author delaplvi and dufourlu
  *
  */
 public class CelticChess
 {
- /**
-  *  Use all of the parameter to lunch the game
-  */
 
-public boolean startGame;
+/**
+ *  Create the board
+ */
+public Board board;
+/**
+ * Used for the player1
+ */
+public Player player1;
+/** 
+ *  Used for the player2
+ */
+public Player player2;
+
+/**
+ *  Used to set up the time
+ */
+public Chrono chrono;
 
 /** 
- * @param Sg  Change his value to start/end the game
- * 
+ *  Define all of the settings for the game. 
  */
-
-
-
-public CelticChess (int Sg)
+public CelticChess ()
 {
-    /**
-     *  Call this part to lunch a game
-     */
-    this.startGame = true;
+    
+}   
+/**
+ *  Définir ici l'algo pour le déroulement de la partie
+ */
+public void startGame()
+{
+    //while
+    //    player1 (dépend si blanc ou noir pour le roi)
+    //    si le roi est dans l'angle ( ou n'existe plus )
+    //    return finpartie
+    // else tour joueur2
 }
+
+
+
+
+
+
+
+
+
 }

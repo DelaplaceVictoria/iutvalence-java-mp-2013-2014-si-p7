@@ -9,6 +9,7 @@ package fr.iutvalence.java.mp.CelticChess;
 public class Player
 {
 
+    // TODO (think about it) the following fields do not make any sense
     /**
      * Start/stop player1 round
      */

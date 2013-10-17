@@ -32,6 +32,7 @@ public class CelticChess
      * Define all of the settings for the game.
      */
     
+    // TODO (fix) finish writing the constructor (it should initialize all fields)
     public CelticChess()
     {
 
@@ -43,6 +44,7 @@ public class CelticChess
      */
     public void startGame() {
     
+        // TODO (fix) fields should be initialized in constructor
         this.chrono = new Chrono();
         this.board = new Board();
         this.player1 = new Player();

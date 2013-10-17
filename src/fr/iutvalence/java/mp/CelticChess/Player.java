@@ -12,10 +12,21 @@ public class Player
     /**
      * Start/stop player1 round
      */
-    private boolean playJoueur1;
+    public boolean playJoueur1;
     /**
      *  Start/stop player2 round
      */
-    private boolean playJoueur2;
+    public boolean playJoueur2;
+  
+    
+  /**
+   *  Prepare each player to start a game 
+   */
+    
+    public Player() {
+        this.playJoueur1 = true;
+        this.playJoueur2 = false;
+    
+    }
     
 }

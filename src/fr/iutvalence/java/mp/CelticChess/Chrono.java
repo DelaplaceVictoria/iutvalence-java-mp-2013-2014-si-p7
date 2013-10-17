@@ -10,19 +10,23 @@ public class Chrono
     /**
      * Use this value to define the time.
      */
-    @SuppressWarnings("unused")
-    private int chrono;
+    public int chronoJoueur1 = 60000;
+   
+    /**
+     * Use this value to define the time.
+     */
+    public int chronoJoueur2 = 60000;
+    
     /**
      * According to this boolean, one player will start to play
      */
     
-    @SuppressWarnings("unused")
-    private boolean tempsJoueur1Ecoule = false;
+    public boolean tempsJoueur1Ecoule = false;
  /**
   * According to this boolean, the other player will start to play
   */
-    @SuppressWarnings("unused")
-    private boolean tempsJoueur2Ecoule = false;
+    
+    public boolean tempsJoueur2Ecoule = false;
 
     
  /**
@@ -30,6 +34,10 @@ public class Chrono
  */
 public Chrono()
  {
-     this.chrono = 60;
+     this.chronoJoueur1 = 60000;
+     this.chronoJoueur2 = 60000;
  }
- }
+
+
+
+}

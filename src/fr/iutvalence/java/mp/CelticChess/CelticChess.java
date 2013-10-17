@@ -8,48 +8,51 @@ package fr.iutvalence.java.mp.CelticChess;
  */
 public class CelticChess
 {
-    // TODO (fix) rewrite comment
     /**
-     * Create the board
+     * Board which we will place all pawns (9x9 cases)
      */
     public Board board;
 
-    // TODO (fix) rewrite comment
     /**
-     * Used for the player1
+     * The former player will play (white)
      */
     public Player player1;
     
-    // TODO (fix) rewrite comment
     /**
-     * Used for the player2
+     * The later player will play (black)
      */
     public Player player2;
 
-    // TODO (fix) rewrite comment
     /**
-     * Used to set up the time
+     * Define the time each player play
      */
     public Chrono chrono;
-
+    
     /**
      * Define all of the settings for the game.
      */
+    
     public CelticChess()
     {
 
     }
 
     /**
-     * Définir ici l'algo pour le déroulement de la partie
+     * reinitialize startGame for each new game, for that 
+     * call Chrono from Chrono.java to set up the time. 
      */
-    public void startGame()
-    {
-        // while
-        // player1 (dépend si blanc ou noir pour le roi)
-        // si le roi est dans l'angle ( ou n'existe plus )
-        // return finpartie
-        // else tour joueur2
+    public void startGame() {
+    
+        this.chrono = new Chrono();
+        this.board = new Board();
+        this.player1 = new Player();
+        
+          /* while
+           * player1 (dépend si blanc ou noir pour le roi)
+           * si le roi est dans l'angle ( ou n'existe plus )
+           * return finpartie
+           * else tour joueur2
+           */ 
     }
 
 }

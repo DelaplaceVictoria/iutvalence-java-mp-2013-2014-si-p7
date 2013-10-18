@@ -8,25 +8,43 @@ package fr.iutvalence.java.mp.CelticChess;
 
 public class Player
 {
-
-    // TODO (think about it) the following fields do not make any sense
-    /**
-     * Start/stop player1 round
-     */
-    public boolean playJoueur1;
-    /**
-     *  Start/stop player2 round
-     */
-    public boolean playJoueur2;
-  
+   /**
+    *  Declaration of the white color
+    *  For the moment it is just a string, this will change
+    */
+    private static final String White = null;
     
+    /**
+     * Declaration of the black color
+     *  For the moment it is just a string, this will change
+     */
+    private static final String Black = null;
+    /**
+     * Will allow each player to play.
+     */
+    public boolean playGame;
+    
+    /**
+     *  Define the color of player1 during the game
+     */
+    
+    public String colorPlayer1;
+    
+    /**
+     * Define the color of player2 during the game  
+     */
+    
+    public String colorPlayer2;
+      
   /**
    *  Prepare each player to start a game 
    */
     
     public Player() {
-        this.playJoueur1 = true;
-        this.playJoueur2 = false;
+        this.playGame = true;
+        this.colorPlayer1 = White;
+        this.colorPlayer2 = Black;
+        
     
     }
     

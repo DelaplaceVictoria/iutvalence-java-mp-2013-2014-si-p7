@@ -6,70 +6,67 @@ package fr.iutvalence.java.mp.CelticChess;
  */
 public class Board
 {
-
-    // TODO (fix) fix comment : a constant sets nothing
     /**
-     *  Set an Empty Case for the board
+     *   Initialize a value for an Empty Case for the board
      */
     public static final int EC = 0;
 
-    // TODO (fix) fix comment : a constant sets nothing
     /**
-     *  Set the Black King for the board
+     *   Initialize a value for the Black King for the board
      */
     public static final int BK = 1; 
     
-    // TODO (fix) fix comment : a constant sets nothing    
     /**
-     *  Set the Black pawn for the board
+     *   Initialize a value for the Black pawn for the board
      */
     public static final int BP = 2; 
 
-    // TODO (fix) fix comment : a constant sets nothing
     /**
-     *  Set the White pawn for the board
+     *  Initialize a value for the White pawn for the board
      */
     public static final int WP = 3; 
     
-    // TODO (fix) detail comment
+    
     /**
-     *  Will be used to create a case for each game
+     *  If the king reach this case, black player's win
      */
-    // TODO (fix) rename field
-    public int[][] monTableau; 
-    
-    
-    // TODO (fix) this looks like a constructor, rewrite as a constructor 
+    public static final int SC = 4; 
     /**
-     *  Create the 9*9 board
-     * @param args 
+     *  Will create a 9*9 board for each game 
      */
-    public void celticBoard (String[] args){
+    public int[][] board; 
+        
+    /**
+     *  Will create the board will all of the pawns,
+     *   this will be used when we call a new Game into CelticChess
+     */
 
-     int value = 1;
-
-     int[][] monTableau = new int[9][9];
-
-     for (int i = 0; i < 9; i++){
-
-     for(int j = 0; j < 9; j++){
-
-     monTableau[i][j] = value + i;
-     }
-     }
-     }
-
-
-/**
- *  Will create the board will all of the pawns,
- *   this will be used when we call a new Game into CelticChess
- */
-public Board() {
-      
-    this.monTableau =  new int[9][9];
-          /*
-           *  Modifier 'new int [9][9] par la valeur de celticBoard
-           */
-    
-}
+    public Board() {
+     
+    this.board = new int[][] 
+            {
+            {SC,SC,EC,WP,WP,WP,EC,SC,SC},
+            {SC,EC,EC,EC,WP,EC,EC,EC,SC},
+            {EC,EC,EC,EC,EC,EC,EC,EC,EC},
+            {WP,EC,EC,BP,BP,BP,EC,EC,WP},
+            {WP,WP,EC,BP,BK,BP,EC,WP,WP},
+            {WP,EC,EC,BP,BP,BP,EC,EC,WP},
+            {EC,EC,EC,EC,EC,EC,EC,EC,EC},          
+            {SC,EC,EC,EC,WP,EC,EC,EC,SC},
+            {SC,SC,EC,WP,WP,WP,EC,SC,SC},
+            };
+    int i=0;
+    int j;
+    while (i < 9)
+    {
+      j = 0;
+      while(j < 9)
+      {
+        System.out.print(this.board[i][j]);
+        j++;
+      }
+      System.out.println("");
+      i++;
+    }
+    }
 }

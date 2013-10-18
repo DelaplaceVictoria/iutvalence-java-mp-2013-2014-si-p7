@@ -32,10 +32,12 @@ public class CelticChess
      * Define all of the settings for the game.
      */
     
-    // TODO (fix) finish writing the constructor (it should initialize all fields)
-    public CelticChess()
-    {
-
+    public CelticChess() {
+        
+        this.chrono = new Chrono();
+        this.board = new Board();
+        this.player1 = new Player();
+        this.player2 = new Player();
     }
 
     /**
@@ -43,12 +45,7 @@ public class CelticChess
      * call Chrono from Chrono.java to set up the time. 
      */
     public void startGame() {
-    
-        // TODO (fix) fields should be initialized in constructor
-        this.chrono = new Chrono();
-        this.board = new Board();
-        this.player1 = new Player();
-        
+      
           /* while
            * player1 (dépend si blanc ou noir pour le roi)
            * si le roi est dans l'angle ( ou n'existe plus )

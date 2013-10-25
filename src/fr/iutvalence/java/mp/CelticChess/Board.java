@@ -46,27 +46,77 @@ public class Board
     public Board()
     {
 
-        this.board = new int[][] { { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG }, { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
-                { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY }, { WHITE_PAWN, EMPTY, EMPTY, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, EMPTY, EMPTY, WHITE_PAWN },
-                { WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_PAWN, BLACK_KING, BLACK_PAWN, EMPTY, WHITE_PAWN, WHITE_PAWN }, { WHITE_PAWN, EMPTY, EMPTY, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, EMPTY, EMPTY, WHITE_PAWN },
-                { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY }, { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
+        this.board = new int[][] { 
+                { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG },
+                { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
+                { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
+                { WHITE_PAWN, EMPTY, EMPTY, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, EMPTY, EMPTY, WHITE_PAWN },
+                { WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_PAWN, BLACK_KING, BLACK_PAWN, EMPTY, WHITE_PAWN, WHITE_PAWN },
+                { WHITE_PAWN, EMPTY, EMPTY, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, EMPTY, EMPTY, WHITE_PAWN },
+                { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
+                { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
                 { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG }, };
        
-        // TODO (fix) rename local variale (more explicit)
-        int i = 0;
-        // TODO (fix) rename local variale (more explicit)
-        int j;
+        // TODO (fix) rename local variale (more explicit) Check
+        int lignes = 0;
+        // TODO (fix) rename local variale (more explicit) Check
+        int colonnes;
         // TODO (fix) declare hard-coded values as constants
-        while (i < 9)
+        while (lignes < 9)
         {
-            j = 0;
-            while (j < 9)
+            colonnes = 0;
+            while (colonnes < 9)
             {
-                System.out.print(this.board[i][j]);
-                j++;
+                System.out.print(this.board[lignes][colonnes]);
+                colonnes++;
             }
             System.out.println("");
-            i++;
+            lignes++;
         }
+    }
+    
+    /**
+     * Declaration of variable sourcex
+     */
+    int sourcex;
+    /**
+     * Declaration of variable sourcey
+     */
+    int sourcey;
+    /**
+     * Declaration of variable destinationx
+     */
+    int destinationx;
+    /**
+     * Declaration of variable destinationy
+     */
+    int destinationy;
+    
+    /**
+     * Define the initiale position of a paws
+     */
+    int [][] source;{
+        this.source = new int[this.sourcex][this.sourcey];
+    }
+    /**
+     * Define the final position of a paws
+     */
+    int [][] destination;{
+        this.destination = new int[this.destinationx][this.destinationy];
+        
+    }
+    
+    /**
+     * We will try to see if we can move a pawn, all of the exception case will
+     * appear after. ( For example we can't put a pawn on another.)
+     * @param sourcex
+     * @param sourcey
+     * @param destinationx
+     * @param destinationy
+     * @return action
+     */
+    private boolean action(int sourcex, int sourcey,int destinationx, int destinationy) {
+        
+        return action(sourcex , sourcey , destinationx , destinationy);
     }
 }

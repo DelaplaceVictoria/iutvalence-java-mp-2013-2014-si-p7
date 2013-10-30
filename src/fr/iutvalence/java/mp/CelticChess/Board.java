@@ -38,43 +38,9 @@ public class Board
      */
     public int[][] board;
 
-    /**
-     * Will create the board will all of the pawns, this will be used when we
-     * call a new Game into CelticChess
-     */
-
-    public Board()
-    {
-
-        this.board = new int[][] { 
-                { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG },
-                { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
-                { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
-                { WHITE_PAWN, EMPTY, EMPTY, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, EMPTY, EMPTY, WHITE_PAWN },
-                { WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_PAWN, BLACK_KING, BLACK_PAWN, EMPTY, WHITE_PAWN, WHITE_PAWN },
-                { WHITE_PAWN, EMPTY, EMPTY, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, EMPTY, EMPTY, WHITE_PAWN },
-                { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
-                { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
-                { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG }, };
-       
-        // TODO (fix) rename local variale (more explicit) Check
-        int lignes = 0;
-        // TODO (fix) rename local variale (more explicit) Check
-        int colonnes;
-        // TODO (fix) declare hard-coded values as constants
-        while (lignes < 9)
-        {
-            colonnes = 0;
-            while (colonnes < 9)
-            {
-                System.out.print(this.board[lignes][colonnes]);
-                colonnes++;
-            }
-            System.out.println("");
-            lignes++;
-        }
-    }
     
+    
+    // TODO (fix) the following fields look much more like local variables
     /**
      * Declaration of variable sourcex
      */
@@ -95,17 +61,57 @@ public class Board
     /**
      * Define the initiale position of a paws
      */
+    // TODO (fix) fields must be initialized in constructors
     int [][] source;{
         this.source = new int[this.sourcex][this.sourcey];
     }
     /**
      * Define the final position of a paws
      */
+    // TODO (fix) fields must be initialized in constructors
     int [][] destination;{
         this.destination = new int[this.destinationx][this.destinationy];
         
     }
     
+    /**
+     * Will create the board will all of the pawns, this will be used when we
+     * call a new Game into CelticChess
+     */
+
+    public Board()
+    {
+
+        this.board = new int[][] { 
+                { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG },
+                { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
+                { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
+                { WHITE_PAWN, EMPTY, EMPTY, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, EMPTY, EMPTY, WHITE_PAWN },
+                { WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_PAWN, BLACK_KING, BLACK_PAWN, EMPTY, WHITE_PAWN, WHITE_PAWN },
+                { WHITE_PAWN, EMPTY, EMPTY, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, EMPTY, EMPTY, WHITE_PAWN },
+                { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
+                { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
+                { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG }, };
+       
+        // TODO (fix) rename local variable (more explicit) Check
+        int lignes = 0;
+        // TODO (fix) rename local variable (more explicit) Check
+        int colonnes;
+        // TODO (fix) declare hard-coded values as constants
+        while (lignes < 9)
+        {
+            colonnes = 0;
+            while (colonnes < 9)
+            {
+                System.out.print(this.board[lignes][colonnes]);
+                colonnes++;
+            }
+            System.out.println("");
+            lignes++;
+        }
+    }
+    
+    // TODO (fix) finish writing comment
     /**
      * We will try to see if we can move a pawn, all of the exception case will
      * appear after. ( For example we can't put a pawn on another.)

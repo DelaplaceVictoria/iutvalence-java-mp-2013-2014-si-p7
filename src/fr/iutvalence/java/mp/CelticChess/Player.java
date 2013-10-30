@@ -20,6 +20,9 @@ public class Player
      * will change
      */
     private static final String BLACK = null;
+    
+    // TODO (fix) this field looks like a local variable taht should be handled in
+    // CelticChess
     /**
      * Will allow each player to play.
      */

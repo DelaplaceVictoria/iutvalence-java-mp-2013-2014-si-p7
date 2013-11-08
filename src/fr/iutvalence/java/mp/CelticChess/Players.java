@@ -7,7 +7,7 @@ package fr.iutvalence.java.mp.CelticChess;
  * 
  */
 
-public class Player
+public class Players
 {
     /**
      * Declaration of the white color For the moment it is just a string, this
@@ -21,12 +21,7 @@ public class Player
      */
     private static final String BLACK = null;
     
-    // TODO (fix) this field looks like a local variable taht should be handled in
-    // CelticChess
-    /**
-     * Will allow each player to play.
-     */
-    public boolean playGame;
+
 
     /**
      * Define the color of player1 during the game
@@ -46,9 +41,8 @@ public class Player
      * Prepare each player to start a game
      */
 
-    public Player()
+    public Players()
     {
-        this.playGame = true;
         this.colorPlayer1 = WHITE;
         this.colorPlayer2 = BLACK;
 

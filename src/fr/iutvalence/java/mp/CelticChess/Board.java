@@ -38,42 +38,6 @@ public class Board
      */
     public int[][] board;
 
-    
-    
-    // TODO (fix) the following fields look much more like local variables
-    /**
-     * Declaration of variable sourcex
-     */
-    int sourcex;
-    /**
-     * Declaration of variable sourcey
-     */
-    int sourcey;
-    /**
-     * Declaration of variable destinationx
-     */
-    int destinationx;
-    /**
-     * Declaration of variable destinationy
-     */
-    int destinationy;
-    
-    /**
-     * Define the initiale position of a paws
-     */
-    // TODO (fix) fields must be initialized in constructors
-    int [][] source;{
-        this.source = new int[this.sourcex][this.sourcey];
-    }
-    /**
-     * Define the final position of a paws
-     */
-    // TODO (fix) fields must be initialized in constructors
-    int [][] destination;{
-        this.destination = new int[this.destinationx][this.destinationy];
-        
-    }
-    
     /**
      * Will create the board will all of the pawns, this will be used when we
      * call a new Game into CelticChess
@@ -92,29 +56,57 @@ public class Board
                 { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
                 { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
                 { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG }, };
-       
-        // TODO (fix) rename local variable (more explicit) Check
+    }
+    /**
+     * 
+     * @param ligne
+     * @param colonnes
+     * @return System.out  
+     */
+     public static int Board;{
         int lignes = 0;
-        // TODO (fix) rename local variable (more explicit) Check
-        int colonnes;
-        // TODO (fix) declare hard-coded values as constants
-        while (lignes < 9)
+        int colonnes = 0;
+        while (lignes < 8)
         {
-            colonnes = 0;
-            while (colonnes < 9)
-            {
-                System.out.print(this.board[lignes][colonnes]);
+            while (colonnes < 8)
+            {               
                 colonnes++;
             }
-            System.out.println("");
             lignes++;
         }
-    }
-    
-    // TODO (fix) finish writing comment
+        System.out.print(this.board[lignes][colonnes]);
+     }
+        /**
+         * Method to get the position of a pawns
+         */
+     public int getSource[][];{ 
+            int sourcex;   // Doit prendre pour valeur la ligne en x du tableau
+            int sourcey;   // Doit prendre pour valeur la Colonne en y du tableau
+            this.getSource = new int[sourcex][sourcey];
+      // return getSource;
+        }
+        /**
+         * Method to get the destination for a pawns
+         */
+       public int getDestination[][] ;
+        {
+            int destinationx; // Doit prendre pour valeur la ligne en x de la destination du tableau
+            int destinationy; // Doit prendre pour valeur la Colonne en y de la destination du tableau
+            this.getDestination = new int[destinationx][destinationy];
+        }
+        
+        // This method must be erase later
+        /**
+         *  
+         *  To swap 2 positions into the board
+         */
+     //   private void swap; {
+     //   int[][] memoire=source;
+     //  source=destination;
+     //   destination=memoire;
+     //   }
     /**
-     * We will try to see if we can move a pawn, all of the exception case will
-     * appear after. ( For example we can't put a pawn on another.)
+     * All of the illegal action will be treated here, for example put a pawns out of the board.
      * @param sourcex
      * @param sourcey
      * @param destinationx

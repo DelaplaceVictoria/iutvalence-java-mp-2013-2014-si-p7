@@ -39,6 +39,7 @@ public class CelticChess
      */
     public boolean playGame;
 
+    // TODO (fix) write comment
     public CelticChess()
     {
         this.chrono = new Chrono();

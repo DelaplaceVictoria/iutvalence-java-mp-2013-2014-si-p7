@@ -7,22 +7,25 @@ package fr.iutvalence.java.mp.CelticChess;
  * 
  */
 
+// TODO (fix) consider that Players should be renamed player and should
+// represent a single player
+
 public class Players
 {
     /**
      * Declaration of the white color For the moment it is just a string, this
      * will change
      */
+    // TODO (fix) this constant has a null value, strange
     private static final String WHITE = null;
 
     /**
      * Declaration of the black color For the moment it is just a string, this
      * will change
      */
+    // TODO (fix) this constant has a null value, strange
     private static final String BLACK = null;
     
-
-
     /**
      * Define the color of player1 during the game
      */

@@ -16,12 +16,12 @@ public class CelticChess
     /**
      * The former player will play (white)
      */
-    public Players whitePlayer;
+    public Player whitePlayer;
 
     /**
      * The later player will play (black)
      */
-    public Players blackPlayer;
+    public Player blackPlayer;
 
     /**
      * Define the time each player play
@@ -32,20 +32,25 @@ public class CelticChess
      * Define all of the settings for the game.
      */
    
-    // TODO (fix) this field looks like a local variable taht should be handled in
+    // TODO (fix) this field looks like a local variable that should be handled in
     // CelticChess   Fixed
+    
     /**
      * Will allow each player to play.
      */
     public boolean playGame;
 
+    
+   /**
+    * Initialize a game
+    */
     // TODO (fix) write comment
     public CelticChess()
     {
         this.chrono = new Chrono();
         this.board = new Board();
-        this.whitePlayer = new Players();
-        this.blackPlayer = new Players();
+        this.whitePlayer = new Player();
+        this.blackPlayer = new Player();
     }
 
     /**

@@ -37,6 +37,16 @@ public class Board
      * Will create a 9*9 board for each game
      */
     public int[][] board;
+    
+    /**
+     * Define a line on the board
+     */
+    public int x;
+    
+    /**
+     * Define a column on the board
+     */
+    public int y;
 
     /**
      * Will create the board will all of the pawns, this will be used when we
@@ -56,6 +66,8 @@ public class Board
                 { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
                 { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
                 { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG }, };
+       
+
     }
     /**
      * 
@@ -80,34 +92,25 @@ public class Board
          * Method to get the position of a pawns
          */
      public int getSource[][];{ 
-            int sourcex;   // Doit prendre pour valeur la ligne en x du tableau
-            int sourcey;   // Doit prendre pour valeur la Colonne en y du tableau
+            int sourcex=this.x;   
+            int sourcey=this.y;   
             this.getSource = new int[sourcex][sourcey];
-      // return getSource;
+       //return getSource;
         }
         /**
          * Method to get the destination for a pawns
          */
        public int getDestination[][] ;
         {
-            int destinationx; // Doit prendre pour valeur la ligne en x de la destination du tableau
-            int destinationy; // Doit prendre pour valeur la Colonne en y de la destination du tableau
+            int destinationx=this.x; 
+            int destinationy=this.y; 
             this.getDestination = new int[destinationx][destinationy];
+            //return getDestination;
         }
         
-        // This method must be erase later
-        /**
-         *  
-         *  To swap 2 positions into the board
-         */
-     //   private void swap; {
-     //   int[][] memoire=source;
-     //  source=destination;
-     //   destination=memoire;
-     //   }
     /**
      * All of the illegal action will be treated here, for example put a pawns out of the board.
-     * @param sourcex
+     * @param sourcex 
      * @param sourcey
      * @param destinationx
      * @param destinationy

@@ -27,13 +27,6 @@ public class CelticChess
      * Define the time each player play
      */
     public Chrono chrono;
-
-    /**
-     * Define all of the settings for the game.
-     */
-   
-    // TODO (fix) this field looks like a local variable that should be handled in
-    // CelticChess   Fixed
     
     /**
      * Will allow each player to play.
@@ -44,7 +37,7 @@ public class CelticChess
    /**
     * Initialize a game
     */
-    // TODO (fix) write comment
+    // TODO (fix) detail comment
     public CelticChess()
     {
         this.chrono = new Chrono();

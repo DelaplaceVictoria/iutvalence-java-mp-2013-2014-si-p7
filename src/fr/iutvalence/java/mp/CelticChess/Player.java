@@ -6,27 +6,20 @@ package fr.iutvalence.java.mp.CelticChess;
  * @author delaplvi
  * 
  */
-
-// TODO (fix) consider that Players should be renamed player and should
-// represent a single player   Fixed
-
 public class Player
 {
     /**
      * Define the number of a player (player1 and player2)
      */
-    public int numberPlayer;
+    public int number;
     
     /**
      * Boolean which permit the declaration of the color
      */
-
-    // TODO (fix) this is confusing, it is not clear if this class represents a user
-    // or both          Fixed
-    public boolean colorPlayer;
+    public boolean isWhite;
     
     
-
+    // TODO (fix) rewrite comment
     /**
      * Prepare each player to start a game
      */

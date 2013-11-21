@@ -32,17 +32,19 @@ public class Board
      * If the king reach this case, black player's win
      */
     public static final int BLACK_FLAG = 4;
-   
+
     /**
      * Will create a 9*9 board for each game
      */
     public int[][] board;
-    
+
+    // TODO (fix) looks like a local variable
     /**
      * Define a line on the board
      */
     public int x;
-    
+
+    // TODO (fix) looks like a local variable
     /**
      * Define a column on the board
      */
@@ -56,7 +58,7 @@ public class Board
     public Board()
     {
 
-        this.board = new int[][] { 
+        this.board = new int[][] {
                 { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG },
                 { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
                 { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
@@ -66,59 +68,70 @@ public class Board
                 { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
                 { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
                 { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG }, };
-       
 
     }
+
+    // TODO (fix) finish writing comment
     /**
      * 
      * @param ligne
      * @param colonnes
-     * @return System.out  
+     * @return System.out
      */
-     public static int Board;{
+    // TODO (fix) this should be a constructor, declare it as such 
+    public static int Board;
+    {
         int lignes = 0;
         int colonnes = 0;
         while (lignes < 8)
         {
             while (colonnes < 8)
-            {               
+            {
                 colonnes++;
             }
             lignes++;
         }
         System.out.print(this.board[lignes][colonnes]);
-     }
-        /**
-         * Method to get the position of a pawns
-         */
-     public int getSource[][];{ 
-            int sourcex=this.x;   
-            int sourcey=this.y;   
-            this.getSource = new int[sourcex][sourcey];
-       //return getSource;
-        }
-        /**
-         * Method to get the destination for a pawns
-         */
-       public int getDestination[][] ;
-        {
-            int destinationx=this.x; 
-            int destinationy=this.y; 
-            this.getDestination = new int[destinationx][destinationy];
-            //return getDestination;
-        }
-        
+    }
     /**
-     * All of the illegal action will be treated here, for example put a pawns out of the board.
-     * @param sourcex 
+     * Method to get the position of a pawns
+     */
+    // TODO (fix) a position is a grid?
+    public int getSource[][];
+    {
+        int sourcex = this.x;
+        int sourcey = this.y;
+        this.getSource = new int[sourcex][sourcey];
+        // return getSource;
+    }
+    
+    // TODO (fix) a position is a grid?
+    /**
+     * Method to get the destination for a pawns
+     */
+    public int getDestination[][];
+    {
+        int destinationx = this.x;
+        int destinationy = this.y;
+        this.getDestination = new int[destinationx][destinationy];
+        // return getDestination;
+    }
+
+    // TODO (fix) finish writing comment
+    /**
+     * All of the illegal action will be treated here, for example put a pawns
+     * out of the board.
+     * 
+     * @param sourcex
      * @param sourcey
      * @param destinationx
      * @param destinationy
      * @return action
      */
     // TODO
-    private boolean action(int sourcex, int sourcey,int destinationx, int destinationy) {
-        
-        return action(sourcex , sourcey , destinationx , destinationy);
+    private boolean action(int sourcex, int sourcey, int destinationx, int destinationy)
+    {
+
+        return action(sourcex, sourcey, destinationx, destinationy);
     }
 }

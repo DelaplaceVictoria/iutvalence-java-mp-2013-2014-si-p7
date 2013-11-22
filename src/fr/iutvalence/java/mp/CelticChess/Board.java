@@ -36,19 +36,13 @@ public class Board
     /**
      * Will create a 9*9 board for each game
      */
-    public int[][] board;
+    private int[][] board;
 
-    // TODO (fix) looks like a local variable
-    /**
-     * Define a line on the board
-     */
-    public int x;
+    private int[][] getSource;
 
-    // TODO (fix) looks like a local variable
-    /**
-     * Define a column on the board
-     */
-    public int y;
+    private int[][] getDestination;
+
+
 
     /**
      * Will create the board will all of the pawns, this will be used when we
@@ -57,7 +51,6 @@ public class Board
 
     public Board()
     {
-
         this.board = new int[][] {
                 { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG },
                 { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
@@ -67,22 +60,32 @@ public class Board
                 { WHITE_PAWN, EMPTY, EMPTY, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, EMPTY, EMPTY, WHITE_PAWN },
                 { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
                 { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
-                { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG }, };
+                { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG },
+                };
+        }
 
-    }
-
-    // TODO (fix) finish writing comment
     /**
      * 
+     */
+//    public void empile()
+//    {
+//       if (this.destination == (BLACK_KING || BLACK_PAWN || WHITE_PAWE)) return case_pleine;
+//        if (this.destination == (EMPTY || BLACK_FLAG)) return case_vide;
+//                return success;
+//    }
+
+
+    /**
+     *  This will be used to print the board for the monitor
      * @param ligne
      * @param colonnes
+     * @return 
      * @return System.out
      */
-    // TODO (fix) this should be a constructor, declare it as such 
-    public static int Board;
+    public void printBoard(int lignes, int colonnes)   // Vérif pour le void ?
     {
-        int lignes = 0;
-        int colonnes = 0;
+         lignes = 0;
+         colonnes = 0;
         while (lignes < 8)
         {
             while (colonnes < 8)
@@ -96,42 +99,22 @@ public class Board
     /**
      * Method to get the position of a pawns
      */
-    // TODO (fix) a position is a grid?
-    public int getSource[][];
+    public int getSource(int x, int y)
     {
-        int sourcex = this.x;
-        int sourcey = this.y;
+        int sourcex = x;
+        int sourcey = y;
         this.getSource = new int[sourcex][sourcey];
-        // return getSource;
+        return sourcey; // Mettre un source qui prend en param x et y
     }
-    
-    // TODO (fix) a position is a grid?
     /**
      * Method to get the destination for a pawns
      */
-    public int getDestination[][];
+    public int getDestination(int x, int y)
     {
-        int destinationx = this.x;
-        int destinationy = this.y;
+        int destinationx = x;
+        int destinationy = y;
         this.getDestination = new int[destinationx][destinationy];
-        // return getDestination;
+        return destinationy; // Mettre un destination qui prend en param x et y
     }
-
-    // TODO (fix) finish writing comment
-    /**
-     * All of the illegal action will be treated here, for example put a pawns
-     * out of the board.
-     * 
-     * @param sourcex
-     * @param sourcey
-     * @param destinationx
-     * @param destinationy
-     * @return action
-     */
-    // TODO
-    private boolean action(int sourcex, int sourcey, int destinationx, int destinationy)
-    {
-
-        return action(sourcex, sourcey, destinationx, destinationy);
-    }
+    
 }

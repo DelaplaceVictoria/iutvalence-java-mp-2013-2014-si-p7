@@ -18,10 +18,8 @@ public class Player
      */
     public boolean isWhite;
     
-    
-    // TODO (fix) rewrite comment
     /**
-     * Prepare each player to start a game
+     * Initialize the constructor which will permit to set all of the settings for the player
      */
 
     public Player()

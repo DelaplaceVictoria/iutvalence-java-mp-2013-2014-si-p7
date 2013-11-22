@@ -35,9 +35,8 @@ public class CelticChess
 
     
    /**
-    * Initialize a game
+    * Initialize a game by initializing all of the informations as the board, each player 
     */
-    // TODO (fix) detail comment
     public CelticChess()
     {
         this.chrono = new Chrono();

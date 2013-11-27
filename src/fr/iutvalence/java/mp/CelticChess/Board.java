@@ -38,6 +38,7 @@ public class Board
      */
     private int[][] board;
 
+    // TODO (fix) why having 3 grids when one is enough?
     private int[][] getSource;
 
     private int[][] getDestination;

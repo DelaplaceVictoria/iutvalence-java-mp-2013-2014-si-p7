@@ -28,6 +28,7 @@ public class CelticChess
      */
     public Chrono chrono;
     
+    // TODO (fix) move this as a local variable
     /**
      * Will allow each player to play.
      */

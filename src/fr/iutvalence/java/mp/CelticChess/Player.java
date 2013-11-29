@@ -9,22 +9,25 @@ package fr.iutvalence.java.mp.CelticChess;
 public class Player
 {
     /**
-     * Define the number of a player (player1 and player2)
+     * Define the name of a player (player1 and player2)
      */
-    public int number;
+    public String namePlayer;
     
     /**
      * Boolean which permit the declaration of the color
      */
     public boolean isWhite;
     
-    /**
-     * Initialize the constructor which will permit to set all of the settings for the player
-     */
+   /**
+    * Initialize the constructor which will permit to set all of the settings for the player
+    * @param pName
+    * @param pColor
+    */
 
-    public Player()
+    public Player(String pName, boolean pColor )
     {
-        
+        this.namePlayer = pName;
+        this.isWhite = pColor;
 
     }
 

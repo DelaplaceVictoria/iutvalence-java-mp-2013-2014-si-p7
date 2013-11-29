@@ -38,11 +38,6 @@ public class Board
      */
     private int[][] board;
 
-    // TODO (fix) why having 3 grids when one is enough?
-    private int[][] getSource;
-
-    private int[][] getDestination;
-
 
 
     /**
@@ -63,6 +58,8 @@ public class Board
                 { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
                 { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG },
                 };
+        printBoard();
+        
         }
 
     /**
@@ -77,45 +74,46 @@ public class Board
 
 
     /**
-     *  This will be used to print the board for the monitor
-     * @param ligne
-     * @param colonnes
-     * @return 
-     * @return System.out
+     * 
+     * @param x
+     * @param y
      */
-    public void printBoard(int lignes, int colonnes)   // Vérif pour le void ?
+    public void printBoard()
     {
-         lignes = 0;
-         colonnes = 0;
-        while (lignes < 8)
+        int i=0;
+        int j;
+        while (i < 9)
         {
-            while (colonnes < 8)
+            j = 0;
+            while(j < 9)
             {
-                colonnes++;
+                System.out.print(this.board[i][j]);
+                j++;
             }
-            lignes++;
-        }
-        System.out.print(this.board[lignes][colonnes]);
+            System.out.println("");
+            i++;}
     }
+    
+    
     /**
-     * Method to get the position of a pawns
+     * return the case at line x and column y
+     * @param x is the line of the wanted case
+     * @param y is the column of the wanted case
+     * @return Case an integer which represents the content of a case in (x,y)
      */
-    public int getSource(int x, int y)
+    public int Case(int x, int y)  
     {
-        int sourcex = x;
-        int sourcey = y;
-        this.getSource = new int[sourcex][sourcey];
-        return sourcey; // Mettre un source qui prend en param x et y
-    }
-    /**
-     * Method to get the destination for a pawns
-     */
-    public int getDestination(int x, int y)
-    {
-        int destinationx = x;
-        int destinationy = y;
-        this.getDestination = new int[destinationx][destinationy];
-        return destinationy; // Mettre un destination qui prend en param x et y
+        int lignes = 0;
+        int colonnes = 0;
+       while (lignes < x)
+       {
+           while (colonnes < y)
+           {
+               colonnes++;
+           }
+           lignes++;
+       }
+       return this.board[lignes][colonnes];
     }
     
 }

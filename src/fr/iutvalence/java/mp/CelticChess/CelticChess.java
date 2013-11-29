@@ -42,8 +42,8 @@ public class CelticChess
     {
         this.chrono = new Chrono();
         this.board = new Board();
-        this.whitePlayer = new Player();
-        this.blackPlayer = new Player();
+        this.whitePlayer = new Player("Joueur1", true);
+        this.blackPlayer = new Player("Joueur2", false);
     }
 
     /**

@@ -38,8 +38,6 @@ public class Board
      */
     private int[][] board;
 
-
-
     /**
      * Will create the board will all of the pawns, this will be used when we
      * call a new Game into CelticChess
@@ -56,64 +54,67 @@ public class Board
                 { WHITE_PAWN, EMPTY, EMPTY, BLACK_PAWN, BLACK_PAWN, BLACK_PAWN, EMPTY, EMPTY, WHITE_PAWN },
                 { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
                 { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
-                { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG },
-                };
+                { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG }, };
         printBoard();
-        
-        }
+
+    }
 
     /**
      * 
      */
-//    public void empile()
-//    {
-//       if (this.destination == (BLACK_KING || BLACK_PAWN || WHITE_PAWE)) return case_pleine;
-//        if (this.destination == (EMPTY || BLACK_FLAG)) return case_vide;
-//                return success;
-//    }
+    // public void empile()
+    // {
+    // if (this.destination == (BLACK_KING || BLACK_PAWN || WHITE_PAWE)) return
+    // case_pleine;
+    // if (this.destination == (EMPTY || BLACK_FLAG)) return case_vide;
+    // return success;
+    // }
 
-
-    /**
-     * 
-     * @param x
-     * @param y
-     */
+    // TODO (fix) write comment
+    // TODO (fix) consider overriding Object#toString instead
     public void printBoard()
     {
-        int i=0;
+        int i = 0;
         int j;
+
+        // TODO (fix) declare hard-coded values as constants
         while (i < 9)
         {
             j = 0;
-            while(j < 9)
+            while (j < 9)
             {
                 System.out.print(this.board[i][j]);
                 j++;
             }
             System.out.println("");
-            i++;}
+            i++;
+        }
     }
-    
-    
+
     /**
      * return the case at line x and column y
-     * @param x is the line of the wanted case
-     * @param y is the column of the wanted case
+     * 
+     * @param x
+     *            is the line of the wanted case
+     * @param y
+     *            is the column of the wanted case
      * @return Case an integer which represents the content of a case in (x,y)
      */
-    public int Case(int x, int y)  
+    // TODO (fix) comply with naming conventions
+    // tODO (fix) rename this method (more explicit, should be called get...)
+    public int Case(int x, int y)
     {
         int lignes = 0;
         int colonnes = 0;
-       while (lignes < x)
-       {
-           while (colonnes < y)
-           {
-               colonnes++;
-           }
-           lignes++;
-       }
-       return this.board[lignes][colonnes];
+        while (lignes < x)
+        {
+            while (colonnes < y)
+            {
+                colonnes++;
+            }
+            lignes++;
+        }
+        return this.board[lignes][colonnes];
     }
-    
+
 }

@@ -55,33 +55,72 @@ public class Board
                 { EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY, EMPTY },
                 { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
                 { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG }, };
-        printBoard();
-
+        printBoard(9,9);
+        exchange(5,5,0,0);
     }
 
     /**
-     * 
+     * Define if the exchange between 2 cases is possible
+     * @param x the line of the destination
+     * @param y the column of the destination
+     * @return a boolean, exchange possible(true) or not(false)
      */
-    // public void empile()
-    // {
-    // if (this.destination == (BLACK_KING || BLACK_PAWN || WHITE_PAWE)) return
-    // case_pleine;
-    // if (this.destination == (EMPTY || BLACK_FLAG)) return case_vide;
-    // return success;
-    // }
+    public boolean exchangeIsPossible(int x,int y)
+    {
+        int destination = getCase(x,y);
+        if (destination == 1 ||destination == 2 ||destination == 3)
+        {
+            return false;
+        }else if (destination == 0 ||destination == 4)
+        {
+            return true;
+        }else return false;
+    }
+    
+    /**
+     * Define the exchange of cases
+     * @param x1 the line of the source
+     * @param y1 the column of the source
+     * @param x2 the line of the destination
+     * @param y2 the column of the destination
+     */
+    public void exchange(int x1,int y1, int x2, int y2)
+    {
+        int source = getCase(x1,y1);
+        int destination = getCase(x2,y2);
+        int temp;
 
-    // TODO (fix) write comment
+        
+        if (exchangeIsPossible(x2,y2)==true)
+        {
+            temp=source;
+            source=destination;
+            destination=temp;
+            System.out.println("mouvement effectué");
+        }else
+        {
+            System.out.println("Vous ne pouvez pas faire ce mouvement, trouvez autre chose!");
+        }
+        printBoard(9,9);
+    }
+
+    
+    
     // TODO (fix) consider overriding Object#toString instead
-    public void printBoard()
+    /**
+     * print the board on the screen
+     * @param x number of cases we want in a line
+     * @param y number of cases we want in a column
+     */
+    public void printBoard(int x, int y)
     {
         int i = 0;
         int j;
 
-        // TODO (fix) declare hard-coded values as constants
-        while (i < 9)
+        while (i < x)
         {
             j = 0;
-            while (j < 9)
+            while (j < y)
             {
                 System.out.print(this.board[i][j]);
                 j++;
@@ -89,6 +128,7 @@ public class Board
             System.out.println("");
             i++;
         }
+        System.out.println("");
     }
 
     /**
@@ -100,21 +140,22 @@ public class Board
      *            is the column of the wanted case
      * @return Case an integer which represents the content of a case in (x,y)
      */
-    // TODO (fix) comply with naming conventions
-    // tODO (fix) rename this method (more explicit, should be called get...)
-    public int Case(int x, int y)
+
+    public int getCase(int x, int y)
     {
-        int lignes = 0;
-        int colonnes = 0;
-        while (lignes < x)
-        {
-            while (colonnes < y)
-            {
-                colonnes++;
-            }
-            lignes++;
-        }
-        return this.board[lignes][colonnes];
+        return this.board[x][y];
+    }
+    
+    /**
+     * Give a value on a case in (x,y)
+     * @param x the line of the board
+     * @param y the column of the board
+     * @param value an integer which is the value on the board
+     * @return a value on the board
+     */
+    public int setCase(int x, int y, int value)
+    {
+       return this.board[x][y]=value;
     }
 
 }

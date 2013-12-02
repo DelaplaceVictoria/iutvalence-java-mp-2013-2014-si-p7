@@ -28,11 +28,8 @@ public class CelticChess
      */
     public Chrono chrono;
     
-    // TODO (fix) move this as a local variable
-    /**
-     * Will allow each player to play.
-     */
-    public boolean playGame;
+
+
 
     
    /**
@@ -51,7 +48,11 @@ public class CelticChess
      */
     public void play()
     {
-
+//        /**
+//         * Will allow each player to play.
+//         */
+//        public boolean playGame;
+        
         /*
          * while player1 (dépend si blanc ou noir pour le roi) si le roi est
          * dans l'angle ( ou n'existe plus ) return finpartie else tour joueur2

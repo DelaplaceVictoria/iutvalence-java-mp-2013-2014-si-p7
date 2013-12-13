@@ -36,7 +36,7 @@ public class Board
     /**
      * Will create a 9*9 board for each game
      */
-    private int[][] board;
+    private final int[][] board;
 
     /**
      * Will create the board will all of the pawns, this will be used when we
@@ -56,7 +56,7 @@ public class Board
                 { BLACK_FLAG, EMPTY, EMPTY, EMPTY, WHITE_PAWN, EMPTY, EMPTY, EMPTY, BLACK_FLAG },
                 { BLACK_FLAG, BLACK_FLAG, EMPTY, WHITE_PAWN, WHITE_PAWN, WHITE_PAWN, EMPTY, BLACK_FLAG, BLACK_FLAG }, };
         printBoard(9,9);
-        exchange(5,5,0,0);
+
     }
 
     /**
@@ -86,21 +86,22 @@ public class Board
      */
     public void exchange(int x1,int y1, int x2, int y2)
     {
-        int source = getCase(x1,y1);
-        int destination = getCase(x2,y2);
-        int temp;
+        int temp=getCase(x2,y2);
 
-        
-        if (exchangeIsPossible(x2,y2)==true)
+        if (exchangeIsPossible(x2,y2))
         {
-            temp=source;
-            source=destination;
-            destination=temp;
+            if(endGame(x1,y1,x2,y2)){
+               System.out.println("partie terminée");
+            }
+            setCase(x2, y2, getCase(x1,y1));
+            setCase(x1,y1, temp);
+
             System.out.println("mouvement effectué");
         }else
         {
             System.out.println("Vous ne pouvez pas faire ce mouvement, trouvez autre chose!");
         }
+
         printBoard(9,9);
     }
 
@@ -132,6 +133,26 @@ public class Board
     }
 
     /**
+     * Define the end of the game
+     * @param x the line of the source
+     * @param y the column of the source
+     * @param x2 the line of the destination
+     * @param y2 the column of the destination
+     * @return a boolean which define if the game is finished or not
+     */
+    public boolean endGame(int x, int y, int x2, int y2)
+    {
+        int source = getCase(x,y);
+        int destination = getCase(x2,y2);
+        if(source==1 && destination==4)
+        {
+         return true;
+        }else return false;
+        
+    }
+    
+    
+    /**
      * return the case at line x and column y
      * 
      * @param x
@@ -151,11 +172,10 @@ public class Board
      * @param x the line of the board
      * @param y the column of the board
      * @param value an integer which is the value on the board
-     * @return a value on the board
      */
-    public int setCase(int x, int y, int value)
+    public void setCase(int x, int y, int value)
     {
-       return this.board[x][y]=value;
+       this.board[x][y]=value;
     }
 
 }
